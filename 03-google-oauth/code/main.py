@@ -12,7 +12,7 @@ from firebase_admin import exceptions
 app = Flask(__name__)
 
 cred = credentials.Certificate(
-    "../secret/fir-45c5d-firebase-adminsdk-9b0c7-bbd82f0590.json")
+    "../secret/firebase-credential-file.json")
 firebase_admin.initialize_app(cred)
 
 
@@ -32,7 +32,7 @@ def session_login():
     # ID token before creating a cookie.
 
     id_token = flask.request.json['idToken']
-    
+
     try:
         decoded_claims = auth.verify_id_token(id_token)
 
@@ -65,6 +65,7 @@ def session_login():
     except exceptions.FirebaseError:
         return flask.abort(401, 'Failed to create a session cookie')
 
+
 @app.route('/sessionLogout', methods=['GET'])
 def session_logout():
     session_cookie = flask.request.cookies.get('session')
@@ -76,6 +77,7 @@ def session_logout():
         return response
     except auth.InvalidSessionCookieError:
         return flask.redirect('/login')
+
 
 @app.route('/profile', methods=['GET'])
 def access_restricted_content():

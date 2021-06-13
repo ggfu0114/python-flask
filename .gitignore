@@ -1,1 +1,7 @@
 flask-app-venv
+
+# For the PyCharm UI editor.
+.idea
+
+# For the vscode UI editor.
+.vscode

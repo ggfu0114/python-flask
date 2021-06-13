@@ -1,6 +1,5 @@
-
 import unittest
-from main import app
+from codes.main import app
 
 
 class TestFunc(unittest.TestCase):
@@ -14,4 +13,3 @@ class TestFunc(unittest.TestCase):
     def test_main_func(self):
         resp = self.client.get('/')
         self.assertIn('gFu', resp.get_data(as_text=True))
-
