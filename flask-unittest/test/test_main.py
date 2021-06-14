@@ -1,6 +1,7 @@
 import unittest
-from codes.main import app
 from unittest.mock import patch
+
+from codes.main import app
 
 
 class TestApi(unittest.TestCase):

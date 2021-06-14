@@ -1,6 +1,5 @@
-from flask import Flask
-
 from codes.func import MathFunc
+from flask import Flask
 
 app = Flask(__name__)
 
