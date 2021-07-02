@@ -8,7 +8,7 @@
 ```py
 @app.route('/')
 ```
-URL的入口點，當使用者打錯網址時， APP沒有辦法找到對應的function來處理時，就會出現`404 not found`的錯誤。
+URL的入口點，當使用者打錯網址時， APP沒有辦法找到對應的function來處理時，就會出現 *404 not found* 的錯誤。
 
 ```py
 return "<div>Hello World, gFu.<div>"
