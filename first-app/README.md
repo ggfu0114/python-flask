@@ -7,6 +7,7 @@
 3. 我想要Debug該怎麼做
 
 點選以下影片觀看↘↘
+
 [![Flask 第一個 APP](https://img.youtube.com/vi/eN8s9pHRsNM/0.jpg)](https://youtu.be/eN8s9pHRsNM)
 
 設定或開發環境遇到問題了? 
