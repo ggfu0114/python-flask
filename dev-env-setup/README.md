@@ -1,3 +1,12 @@
+Title: Python的開發環境設定
+Description: 下載程式碼GFU的project source code，設定好Virtual env的開發環境與相依套件
+Authors: GGFU
+Date: 01/07/2021
+Tags: 
+ID: python_dev_env_setup
+base_url: https://ggfu0114.github.io/
+
+
 # Python的開發環境設定 
 
 

@@ -1,4 +1,12 @@
-# 02-flask-unittest
+Title: Flask 要如何做測試
+Description: 如何利用python unittest去測試開發好的web application讓系統更加穩定
+Authors: GGFU
+Date: 01/07/2021
+Tags: 
+ID: flask_unittest
+base_url: https://ggfu0114.github.io/
+
+# flask-unittest
 
 ## Describe
 

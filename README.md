@@ -1,3 +1,11 @@
+Title: Python Flask的分享與教學
+Description: Repo 包含了如何使用 Python Flask 去打造一個 Web application
+Authors: GGFU
+Date: 01/07/2021
+Tags: 
+ID: python_flask_sharing
+base_url: https://ggfu0114.github.io/
+
 # python-flask
 
 ## 這個 Repo 包含了如何使用 Python Flask 去打造一個 Web application

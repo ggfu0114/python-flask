@@ -1,3 +1,13 @@
+Title: Flask 第一個 APP(初學入門)
+Description: 如何利用python flask寫一個最簡單的Web server並執行網站
+Authors: GGFU
+Date: 01/07/2021
+Tags: 
+ID: flask_first_app
+base_url: https://ggfu0114.github.io/
+
+
+
 # Flask 第一個 APP
 
 學了Python卻不知道可以應用在哪裡?
