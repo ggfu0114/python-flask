@@ -16,7 +16,7 @@ class TestApi(unittest.TestCase):
         resp = self.client.get('/')
         self.assertIn('Hello, gFu', resp.get_data(as_text=True))
 
-    @patch('codes.func.MathFunc.get_random_point')
+    @patch('func.MathFunc.get_random_point')
     def test_multiply(self, mock_func):
         mock_func.return_value = (8, 6)
         resp = self.client.get('/')

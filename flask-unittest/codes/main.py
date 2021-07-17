@@ -1,5 +1,8 @@
-from codes.func import MathFunc
+"""This is a simple Flask app for testing demo."""
+
 from flask import Flask
+
+from func import MathFunc
 
 app = Flask(__name__)
 
