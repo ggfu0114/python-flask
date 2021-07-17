@@ -13,8 +13,8 @@ app = Flask(__name__)
 app.secret_key = 'This secret key is not for production.'
 
 
-class Form(FlaskForm):
-    name = StringField('name', validators=[DataRequired(message='Name is Null')])
+class MyForm(FlaskForm):
+    name = StringField('Name', validators=[DataRequired(message='Name is Null')])
     email = EmailField('Email', validators=[DataRequired(message='Email is Null')])
     gender = SelectField('Gender', choices=[('MALE', 'male'), ('FEMALE', 'female')])
     birth = DateField('Birth')
@@ -24,8 +24,8 @@ class Form(FlaskForm):
 
 @app.route('/')
 def hello():
-    form = Form()
 
+    form = MyForm()
     return render_template('index.html', form=form)
 
 
@@ -33,7 +33,7 @@ def hello():
 def upload():
     project_dir = os.path.abspath(os.path.dirname(__file__))
     photo_dir = os.path.join(project_dir, 'photo')
-    form = Form()
+    form = MyForm()
 
     if form.validate_on_submit():
         f = form.photo.data
