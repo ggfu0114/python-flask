@@ -1,3 +1,5 @@
 .vscode
+.idea
+venv
 *.pyc
 secret/firebase-credential-file.json

@@ -13,11 +13,22 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// firebase.analytics();
-var provider = new firebase.auth.GoogleAuthProvider();
+// 
+// Google Oauth
+// 
+var googleProvider = new firebase.auth.GoogleAuthProvider();
 function googleSignin() {
-  firebase.auth().signInWithRedirect(provider);
+  firebase.auth().signInWithRedirect(googleProvider);
 }
+
+// 
+// Facebook Oauth
+// 
+let facebookProvider = new firebase.auth.FacebookAuthProvider();
+function facebookSignin() {
+  firebase.auth().signInWithRedirect(facebookProvider)
+}
+
 
 firebase.auth().getRedirectResult().then(function (result) {
   return firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
@@ -36,7 +47,6 @@ firebase.auth().getRedirectResult().then(function (result) {
       console.log(thrownError);
     }
   });
-}).catch( (error) =>{
-  console.error('Failed to login',error)
+}).catch((error) => {
+  console.error('Failed to login', error)
 });
-

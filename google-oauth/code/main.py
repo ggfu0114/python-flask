@@ -1,6 +1,6 @@
 import datetime
 import time
-
+import os
 import firebase_admin
 import flask
 from firebase_admin import auth
@@ -8,12 +8,13 @@ from firebase_admin import credentials
 from firebase_admin import exceptions
 from flask import Flask
 from flask import render_template
+import pathlib
 
 app = Flask(__name__)
 
-cred = credentials.Certificate(
-    "../secret/firebase-credential-file.json")
-firebase_admin.initialize_app(cred)
+cred_path = os.path.join(pathlib.Path().resolve(), 'secret','firebase-credential-file.json')
+cred = credentials.Certificate(cred_path)
+firebase_admin.initialize_app(cred) 
 
 
 @app.route('/')
